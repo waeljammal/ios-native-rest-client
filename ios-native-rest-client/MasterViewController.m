@@ -111,35 +111,24 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-<<<<<<< HEAD
     return NO;
-=======
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
->>>>>>> FETCH_HEAD
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-<<<<<<< HEAD
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
         Skill *object = _skills[indexPath.row];
-=======
-        NSDate *object = _skills[indexPath.row];
->>>>>>> FETCH_HEAD
         self.detailViewController.detailItem = object;
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-<<<<<<< HEAD
         Skill *object = _skills[indexPath.row];
-=======
-        NSDate *object = _skills[indexPath.row];
->>>>>>> FETCH_HEAD
         [[segue destinationViewController] setDetailItem:object];
     }
 }
